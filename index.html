@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0a12">
+  <meta name="description" content="Panyam Kalyan Reddy — Java Backend Developer building reliable backend systems and practical software.">
+  <title>Panyam Kalyan Reddy | Java Backend Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#090a11;--panel:#11131e;--panel2:#151827;--text:#f4f5ff;--muted:#a2a8bd;--line:rgba(255,255,255,.11);--violet:#a78bfa;--cyan:#67e8f9;--lime:#bef264;--pink:#f0abfc;--max:1120px}
+    *{box-sizing:border-box} html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{margin:0;background:radial-gradient(ellipse at 80% 0%,rgba(124,58,237,.14),transparent 34%),radial-gradient(ellipse at 0% 35%,rgba(6,182,212,.08),transparent 32%),var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none} button,a{ -webkit-tap-highlight-color:transparent}
+    .wrap{width:min(var(--max),calc(100% - 40px));margin-inline:auto}
+    .nav{position:sticky;top:0;z-index:10;background:rgba(9,10,17,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .navin{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-weight:800;letter-spacing:-.04em;font-size:1.08rem}.brand span{color:var(--cyan)}
+    .links{display:flex;align-items:center;gap:24px;color:var(--muted);font-size:.88rem}.links a:hover{color:var(--text)}
+    .menu{display:none;background:transparent;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:8px 12px}
+    .hero{min-height:690px;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:56px;padding-block:84px 96px}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;font:500 .75rem 'DM Mono',monospace;letter-spacing:.09em;text-transform:uppercase;color:var(--cyan);border:1px solid rgba(103,232,249,.25);background:rgba(103,232,249,.06);padding:8px 12px;border-radius:99px}
+    .dot{width:7px;height:7px;background:var(--lime);border-radius:50%;box-shadow:0 0 15px var(--lime)}
+    h1{font-size:clamp(3rem,6.2vw,5.8rem);line-height:.99;letter-spacing:-.075em;margin:25px 0 24px;font-weight:800}
+    .gradient{background:linear-gradient(100deg,var(--cyan),var(--violet) 58%,var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .lead{max-width:620px;color:var(--muted);font-size:1.08rem;line-height:1.85}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid var(--line);border-radius:12px;padding:13px 18px;font-weight:700;font-size:.9rem;transition:transform .2s,border-color .2s,background .2s}
+    .btn:hover{transform:translateY(-3px);border-color:rgba(103,232,249,.6)}.primary{background:linear-gradient(110deg,#67e8f9,#a78bfa);color:#090a11;border:0}
+    .hero-art{position:relative;min-height:390px;display:grid;place-items:center}
+    .orb{position:absolute;width:min(360px,80vw);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 30%,rgba(103,232,249,.24),rgba(167,139,250,.16) 42%,rgba(9,10,17,0) 70%);filter:blur(3px);animation:float 7s ease-in-out infinite}
+    .terminal{position:relative;width:min(430px,100%);border:1px solid rgba(255,255,255,.15);background:rgba(17,19,30,.88);border-radius:18px;box-shadow:0 30px 100px rgba(0,0,0,.38);overflow:hidden;transform:rotate(2deg);animation:float 6s ease-in-out infinite}
+    .termbar{display:flex;gap:7px;padding:15px;border-bottom:1px solid var(--line);align-items:center}.termbar i{width:9px;height:9px;border-radius:50%;background:#fb7185}.termbar i:nth-child(2){background:#fbbf24}.termbar i:nth-child(3){background:#a3e635}.termbar span{margin-left:auto;color:#777f98;font: .72rem 'DM Mono',monospace}
+    pre{margin:0;padding:24px 22px 28px;white-space:pre-wrap;font: .84rem/2 'DM Mono',monospace;color:#cbd5e1}.kw{color:var(--pink)}.fn{color:var(--cyan)}.str{color:var(--lime)}.comment{color:#717b96}
+    .float-tag{position:absolute;background:#171a29;border:1px solid var(--line);border-radius:12px;padding:11px 14px;font: .76rem 'DM Mono',monospace;box-shadow:0 15px 40px #0005}.tag1{top:32px;right:-4px;color:var(--lime)}.tag2{bottom:34px;left:-12px;color:var(--cyan)}
+    section{padding:82px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:34px}.kicker{font:500 .73rem 'DM Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan)}h2{font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.06em;line-height:1.1;margin:10px 0 0}.section-desc{max-width:440px;color:var(--muted);margin:0}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{border:1px solid var(--line);background:linear-gradient(140deg,rgba(21,24,39,.9),rgba(13,15,24,.85));border-radius:18px;padding:26px}.card p{color:var(--muted);margin:10px 0 0}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}.stat{border:1px solid var(--line);border-radius:14px;padding:16px}.stat strong{display:block;font-size:1.35rem;letter-spacing:-.05em}.stat span{font-size:.76rem;color:var(--muted)}
+    .skills{display:flex;flex-wrap:wrap;gap:10px}.chip{font: .78rem 'DM Mono',monospace;color:#d9def0;border:1px solid var(--line);background:#ffffff06;border-radius:9px;padding:9px 12px}.chip:hover{border-color:var(--violet)}
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.project{position:relative;overflow:hidden;transition:transform .25s,border-color .25s}.project:hover{transform:translateY(-5px);border-color:rgba(167,139,250,.55)}.project-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}.project-icon{width:46px;height:46px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(135deg,#164e63,#312e81);font-size:1.3rem}.status{font: .68rem 'DM Mono',monospace;color:var(--lime);border:1px solid #bef26445;border-radius:99px;padding:5px 9px}.project h3{margin:0;font-size:1.18rem;letter-spacing:-.03em}.project p{font-size:.9rem;min-height:75px}.stack{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}.stack span{font-size:.7rem;color:#b8c0d9;background:#ffffff08;padding:5px 8px;border-radius:6px}.project-foot{margin-top:20px;padding-top:15px;border-top:1px solid var(--line);font-size:.78rem;color:var(--muted)}
+    .timeline{display:grid;grid-template-columns:150px 1fr;gap:22px;padding:24px 0;border-bottom:1px solid var(--line)}.timeline:first-child{border-top:1px solid var(--line)}.date{font: .75rem 'DM Mono',monospace;color:var(--cyan);padding-top:4px}.timeline h3{margin:0;font-size:1.12rem}.timeline .org{color:var(--muted);font-size:.87rem}.timeline p{color:var(--muted);margin:10px 0 0;font-size:.9rem}
+    .certs{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.cert{display:flex;gap:14px;align-items:flex-start}.cert-icon{flex:0 0 38px;width:38px;height:38px;display:grid;place-items:center;background:#ffffff08;border:1px solid var(--line);border-radius:11px;color:var(--cyan)}.cert h3{font-size:.9rem;margin:0}.cert p{font-size:.75rem;color:var(--muted);margin:5px 0 0}
+    .contact{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:space-between;gap:28px;background:linear-gradient(115deg,rgba(8,145,178,.14),rgba(124,58,237,.18));border:1px solid var(--line);border-radius:22px;padding:clamp(26px,5vw,52px)}.contact p{color:var(--muted);max-width:520px}.contact-links{display:flex;flex-wrap:wrap;gap:10px}
+    footer{padding:28px 0 40px;color:#737b94;font-size:.76rem}.footerin{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:24px}
+    .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+    @keyframes float{0%,100%{transform:translateY(0) rotate(2deg)}50%{transform:translateY(-12px) rotate(0deg)}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
+    @media(max-width:800px){.hero{grid-template-columns:1fr;gap:10px;padding-top:66px;min-height:auto}.hero-art{min-height:330px}.terminal{max-width:430px}.tag1{right:4%}.tag2{left:2%}.section-head{display:block}.section-desc{margin-top:15px}.contact{align-items:flex-start;flex-direction:column}}
+    @media(max-width:620px){.wrap{width:min(100% - 28px,var(--max))}.links{display:none;position:absolute;top:71px;left:0;right:0;padding:18px 22px;background:#0d0e17;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.links.open{display:flex}.menu{display:block}.hero{padding-block:58px 66px}h1{font-size:clamp(2.8rem,13vw,4.2rem)}section{padding:62px 0}.about-grid,.projects,.certs{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr 1fr}.card{padding:21px}.timeline{grid-template-columns:1fr;gap:6px}.project p{min-height:0}.hero-art{min-height:300px}pre{font-size:.72rem;padding:18px}.float-tag{font-size:.67rem}}
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap navin">
+      <a class="brand" href="#home">Kalyan<span>.</span></a>
+      <nav class="links" id="navlinks" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#certifications">Certifications</a><a href="#contact">Contact</a>
+      </nav>
+      <button class="menu" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">Menu</button>
+    </div>
+  </header>
+  <main>
+    <section class="wrap hero" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="dot"></span> JAVA BACKEND DEVELOPER</div>
+        <h1>Building things<br>that <span class="gradient">work.</span></h1>
+        <p class="lead">I'm <strong>Panyam Kalyan Reddy</strong> — a Java backend developer interested in building reliable APIs, useful applications, and clean, maintainable software. I enjoy turning real-world problems into practical engineering solutions.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">Explore my work <span aria-hidden="true">↘</span></a>
+          <a class="btn" href="https://github.com/2210030355" target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a class="btn" href="https://www.linkedin.com/in/kalyan-reddy-panyam/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        </div>
+        <p style="font: .72rem 'DM Mono',monospace;color:#78819c;margin-top:24px">JAVA · SPRING BOOT · REST APIS · SQL</p>
+      </div>
+      <div class="hero-art" aria-label="Animated code illustration">
+        <div class="orb"></div>
+        <div class="float-tag tag1">System.out.println("Hello");</div>
+        <div class="terminal">
+          <div class="termbar"><i></i><i></i><i></i><span>developer.java</span></div>
+          <pre><span class="kw">public class</span> <span class="fn">Developer</span> {
+  <span class="kw">private</span> String focus =
+    <span class="str">"Backend Engineering"</span>;
+
+  <span class="kw">public</span> void <span class="fn">build</span>() {
+    learn();
+    solveProblems();
+    <span class="comment">// ship useful software</span>
+  }
+}</pre>
+        </div>
+        <div class="float-tag tag2">✦ curious by design</div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="kicker">01 / About</div><h2>Engineer with a<br><span class="gradient">builder mindset.</span></h2></div><p class="section-desc">Focused on backend fundamentals, thoughtful problem-solving, and continuous improvement.</p></div>
+        <div class="about-grid">
+          <article class="card reveal"><div class="kicker">A little about me</div><p>I'm a B.Tech graduate from KL University with an interest in Java, backend development, databases, and cloud technologies. I like understanding how applications work behind the scenes and building services that are clear, dependable, and useful.</p><p>Outside project work, I keep learning through hands-on practice and technical certifications.</p></article>
+          <article class="card reveal"><div class="kicker">Current chapter</div><h3 style="margin:12px 0 0;font-size:1.4rem">Starting my professional journey</h3><p>I joined Tata Consultancy Services in October 2026. I'm looking forward to learning from real engineering teams, strengthening my fundamentals, and contributing to meaningful software projects.</p><div class="stats"><div class="stat"><strong>Java</strong><span>Primary language</span></div><div class="stat"><strong>API</strong><span>Backend focus</span></div><div class="stat"><strong>Always</strong><span>Learning mindset</span></div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="kicker">02 / Toolkit</div><h2>Tools I work with.</h2></div><p class="section-desc">A practical foundation for building, testing, and improving backend applications.</p></div>
+        <div class="card reveal">
+          <div class="kicker" style="margin-bottom:14px">Backend</div><div class="skills"><span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">REST APIs</span><span class="chip">Spring MVC</span></div>
+          <div class="kicker" style="margin:24px 0 14px">Data & Tools</div><div class="skills"><span class="chip">MySQL</span><span class="chip">SQL</span><span class="chip">MongoDB</span><span class="chip">Git & GitHub</span><span class="chip">Postman</span></div>
+          <div class="kicker" style="margin:24px 0 14px">Cloud & Other Interests</div><div class="skills"><span class="chip">AWS</span><span class="chip">Automation</span><span class="chip">Cybersecurity</span><span class="chip">Machine Learning</span></div>
+          <p style="font-size:.75rem;color:#7f88a2;margin:18px 0 0">Edit this list to reflect only technologies you can confidently discuss in an interview.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="kicker">03 / Selected work</div><h2>Projects with a purpose.</h2></div><p class="section-desc">A selection of application ideas and projects. Add repository links, screenshots, and verified implementation details before sharing with recruiters.</p></div>
+        <div class="projects">
+          <article class="card project reveal"><div class="project-top"><div class="project-icon">🛒</div><span class="status">PROJECT</span></div><h3>BestStore — E-commerce Backend</h3><p>A backend for an online store, designed around product and order workflows. A strong showcase for REST API design, persistence, validation, and maintainable service layers.</p><div class="stack"><span>Java</span><span>Spring Boot</span><span>MySQL</span><span>REST APIs</span></div><div class="project-foot">Add: repository URL · API documentation · features you implemented</div></article>
+          <article class="card project reveal"><div class="project-top"><div class="project-icon">💸</div><span class="status">PROJECT</span></div><h3>Expense Tracker</h3><p>An expense-management application for recording transactions and organizing spending. Extend it with category summaries, monthly reports, input validation, and secure user-specific records.</p><div class="stack"><span>Java</span><span>Spring Boot</span><span>SQL</span><span>REST APIs</span></div><div class="project-foot">Add: repository URL · supported operations · sample screenshots</div></article>
+          <article class="card project reveal"><div class="project-top"><div class="project-icon">📚</div><span class="status">PROJECT</span></div><h3>Studious — Learning Web App</h3><p>A Spring Boot web application concept for organizing study activities and learning resources. Describe the real modules, user flows, and persistence approach from your implementation.</p><div class="stack"><span>Java</span><span>Spring Boot</span><span>Web App</span></div><div class="project-foot">Add: repository URL · your exact role · implemented features</div></article>
+          <article class="card project reveal"><div class="project-top"><div class="project-icon">🚌</div><span class="status">PROJECT</span></div><h3>Cloud-Based Bus Tracking System</h3><p>A transport-tracking concept that can present bus locations and route status to users. A full implementation could combine location updates, a backend API, cloud deployment, and a map interface.</p><div class="stack"><span>Backend APIs</span><span>Cloud</span><span>Maps / GPS</span></div><div class="project-foot">Add: actual cloud provider · GPS/data source · repository or demo</div></article>
+          <article class="card project reveal"><div class="project-top"><div class="project-icon">🛡️</div><span class="status">SUGGESTED BUILD</span></div><h3>Secure URL Threat Checker</h3><p>A portfolio extension: build an API that validates submitted URLs, checks domain and URL indicators, and returns a risk explanation. Keep checks defensive and never fetch arbitrary URLs without safeguards.</p><div class="stack"><span>Java</span><span>Spring Boot</span><span>Validation</span><span>Security</span></div><div class="project-foot">Suggested next project — mark complete only after implementation</div></article>
+          <article class="card project reveal"><div class="project-top"><div class="project-icon">📈</div><span class="status">SUGGESTED BUILD</span></div><h3>Developer Job & Salary Insights API</h3><p>A data-backed API that filters job listings by role, skill, location, and salary range. Add pagination, search, input validation, and aggregation endpoints to demonstrate practical backend design.</p><div class="stack"><span>Java</span><span>Spring Boot</span><span>MySQL</span><span>REST APIs</span></div><div class="project-foot">Suggested next project — use a clearly licensed dataset</div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="kicker">04 / Experience & education</div><h2>The journey so far.</h2></div></div>
+        <div class="reveal">
+          <div class="timeline"><div class="date">OCT 2026 — PRESENT</div><div><h3>Tata Consultancy Services (TCS)</h3><div class="org">Joined October 2026 · Official job title to be added</div><p>Beginning my professional journey. I'll update this section with verified responsibilities, training, technologies, and project contributions as they become part of my experience.</p></div></div>
+          <div class="timeline"><div class="date">B.TECH</div><div><h3>KL University</h3><div class="org">Bachelor of Technology · Graduation details to verify</div><p>Academic foundation in software development and computing. Add your official specialization, graduation year, and GPA if you want these displayed publicly.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="kicker">05 / Certifications</div><h2>Learning, validated.</h2></div><p class="section-desc">Credential names below are based on the details provided. Add credential links and verify exact titles before publishing.</p></div>
+        <div class="certs">
+          <article class="card cert reveal"><div class="cert-icon">☁</div><div><h3>AWS Certified Cloud Practitioner</h3><p>Amazon Web Services · Add credential URL</p></div></article>
+          <article class="card cert reveal"><div class="cert-icon">⚙</div><div><h3>Advanced Automation Certificate</h3><p>Issuer / exact credential title to confirm</p></div></article>
+          <article class="card cert reveal"><div class="cert-icon">✦</div><div><h3>Salesforce Certified Agentforce Specialist</h3><p>Salesforce · Add credential URL</p></div></article>
+          <article class="card cert reveal"><div class="cert-icon">⌘</div><div><h3>Red Hat Certified Enterprise Application Developer</h3><p>Red Hat · Add credential URL</p></div></article>
+          <article class="card cert reveal"><div class="cert-icon">◉</div><div><h3>NVIDIA Certification</h3><p>Exact certification title to confirm</p></div></article>
+          <article class="card cert reveal"><div class="cert-icon">◈</div><div><h3>Oracle Certified Associate</h3><p>Exact track / credential title to confirm</p></div></article>
+          <article class="card cert reveal"><div class="cert-icon">🍃</div><div><h3>MongoDB Certified Associate Developer</h3><p>Python track stated · Add credential URL</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="contact reveal">
+          <div><div class="kicker">06 / Contact</div><h2>Let's build something<br><span class="gradient">useful.</span></h2><p>Open to connecting with developers, learning from the community, and discussing backend engineering opportunities.</p></div>
+          <div class="contact-links"><a class="btn primary" href="https://www.linkedin.com/in/kalyan-reddy-panyam/" target="_blank" rel="noreferrer">Connect on LinkedIn ↗</a><a class="btn" href="https://github.com/2210030355" target="_blank" rel="noreferrer">View GitHub ↗</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap footerin"><span>© <span id="year"></span> Panyam Kalyan Reddy</span><span>Designed with curiosity · Built for the web</span><a href="#home">Back to top ↑</a></div></footer>
+  <script>
+    const menuBtn=document.getElementById('menuBtn'),navlinks=document.getElementById('navlinks');
+    menuBtn.addEventListener('click',()=>{const open=navlinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));});
+    navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navlinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');}));
+    document.getElementById('year').textContent=new Date().getFullYear();
+    const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}}),{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+  </script>
+</body>
+</html>
